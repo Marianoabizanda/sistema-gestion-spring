@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import com.gestion.personas_api.dto.PersonaRequest;
+import org.springframework.web.bind.annotation.PathVariable;
+
 
 import jakarta.validation.Valid;
 
@@ -35,6 +37,11 @@ public class PersonaController {
     @PostMapping("/personas")
     public Persona crear(@Valid @RequestBody PersonaRequest request) {//@RequestBody es la clave: le dice a Spring “lo que venga en el body (JSON), conviértelo a un objeto Java”.
         return personaService.crearPersona(request.getNombre(), request.getEdad());
+    }
+
+    @GetMapping("/personas/{id}")
+    public Persona obtenerPorId(@PathVariable Long id) {
+        return personaService.obtenerPorId(id);
     }
 
 

@@ -2,6 +2,16 @@ package com.gestion.personas_api.dto;
 
 import java.util.Map;
 
+//creamos una clase Java que represente una forma de respuesta. “Un objeto que describe cómo se ve un error en mi API”
+
+/*
+Ejemplo:
+{
+"mensaje": "Validación fallida",
+"errores": {
+"nombre": "El nombre es obligatorio"
+}
+}*/
 public class ApiError {
 
     private String mensaje;

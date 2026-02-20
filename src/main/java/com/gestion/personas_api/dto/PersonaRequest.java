@@ -8,6 +8,8 @@ import jakarta.validation.constraints.NotBlank;
 
 // Esto es como una "cajita" para recibir el JSON del cliente
 public class PersonaRequest {
+
+    //---------------------------------------------------
     // Atributos
 
     @NotBlank(message = "El nombre es obligatorio")
@@ -21,6 +23,9 @@ public class PersonaRequest {
     // Constructor vacio
     public PersonaRequest() {
     }
+
+
+    //----------------------------------------------------
 
 
     // Métodos
